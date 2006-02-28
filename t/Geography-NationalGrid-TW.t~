@@ -1,0 +1,22 @@
+#!/usr/bin/perl -w
+use strict;
+use Test;
+
+plan tests => 8;
+
+use Geography::NationalGrid;
+use Geography::NationalGrid::TW;
+ok(1);
+
+# arbitrary points follow
+comp(25.0268337307241, 121.522412806735, 302721.36, 2768851.3995);
+
+sub comp {
+  my ($lat, $long, $e, $n) = @_;
+  my $point = new Geography::NationalGrid::TW(
+      Latitude => $lat,
+      Longitude => $long,
+      );
+  ok(int($e), $point->easting);
+  ok(int($n), $point->northing);
+}
