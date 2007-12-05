@@ -1,7 +1,7 @@
 package Geography::NationalGrid::TW;
 use strict;
 use vars qw(@ISA $VERSION %ellipsoids %mercators);
-($VERSION) = 0.03;
+($VERSION) = 0.04;
 
 use constant DEFAULT_PROJECTION => 'TWD97';
 
@@ -184,7 +184,7 @@ Other projections recognized are 'TWD67', 'TWD97', but only 'TWD97' is tested.
 
 =item GridReference
 
-There is no gred reference in Taiwan datum. Grid related functions are disabled.
+There is no grid reference in Taiwan datum. Grid related functions are disabled.
 
 =item Latitude
 
