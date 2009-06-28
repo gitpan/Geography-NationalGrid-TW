@@ -1,0 +1,14 @@
+--- #YAML:1.0
+name:                Geography-NationalGrid-TW
+version:             0.06
+abstract:            Module to convert Taiwan Datum (TWD67/TM2, TWD97/TM2) to/from Latitude and Longitude
+license:             ~
+author:              
+    - Yen-Ming Lee <leeym@leeym.com>
+generated_by:        ExtUtils::MakeMaker version 6.42
+distribution_type:   module
+requires:     
+    Geography::NationalGrid:       0
+meta-spec:
+    url:     http://module-build.sourceforge.net/META-spec-v1.3.html
+    version: 1.3

@@ -1,5 +1,11 @@
 Revision history for Perl extension Geography::NationalGrid::TW.
 
+0.06  Sun Jun 28 13:46:01 PDT 2009
+	- add "use Exportor" to fix "Can't locate package Exporter" warnings
+	- add two "use ..." in the example of manpage to complete it
+	- correct wrong statement in manpage. Default to 'TWD97', not 'TWD67'
+	- add my email per jidanni's request
+
 0.05  Sun Mar 16 21:07:35 PDT 2008
 	- update test case(s) to support 64-bit
 

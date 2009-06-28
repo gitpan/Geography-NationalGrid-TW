@@ -1,6 +1,7 @@
 Changes
-Makefile.PL
 MANIFEST
+Makefile.PL
 README
-t/Geography-NationalGrid-TW.t
 lib/Geography/NationalGrid/TW.pm
+t/Geography-NationalGrid-TW.t
+META.yml                                 Module meta-data (added by MakeMaker)

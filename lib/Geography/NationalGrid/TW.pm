@@ -1,7 +1,7 @@
 package Geography::NationalGrid::TW;
 use strict;
 use vars qw(@ISA $VERSION %ellipsoids %mercators);
-($VERSION) = 0.05;
+($VERSION) = 0.06;
 
 use constant DEFAULT_PROJECTION => 'TWD97';
 
@@ -155,6 +155,8 @@ Geography::NationalGrid::TW - Module to convert Taiwan Datum (TWD67/TM2, TWD97/T
 You should _create_ the object using the Geography::NationalGrid factory class, but you still need to
 know the object interface, given below.
 
+	use Geography::NationalGrid;
+	use Geography::NationalGrid::TW;
 	# default TWD97
 	my $point1 = new Geography::NationalGrid::TW(
 		'Easting' => 302721.36,
@@ -179,8 +181,8 @@ or Easting and Northing.
 
 =item Projection
 
-Default is 'TWD67', the "TAIWAN DATUM 97".
-Other projections recognized are 'TWD67', 'TWD97', but only 'TWD97' is tested.
+Default is 'TWD97', the "TAIWAN DATUM 97".
+Another projection recognized is 'TWD67', but only 'TWD97' is tested.
 
 =item GridReference
 
@@ -241,7 +243,7 @@ Returns the item from the Userdata hash whose key is the PARAMETER_NAME.
 
 =item transform( PROJECTION )
 
-Transform the point to the new projection, i.e. TWD67 to TWD97 or reverse. Return the point after transformation and keep original point intact. Use the formula proposed by John Hsieh which supposed to provide 2 meter accuracy conversions.
+Transform the point to the new projection, i.e. TWD67 to TWD97 or reverse. Return the point after transformation and keep original point intact. Uses the formula proposed by John Hsieh which is supposed to provide 2 meter accuracy conversions.
 
 =back
 
@@ -254,13 +256,13 @@ This module has been coded in good faith but it may still get things wrong. Henc
 
 =head1 REFERENCES
 
-Jidanni's Taiwan datum - http://jidanni.org/geo/taiwan_datums/
+http://wiki.osgeo.org/wiki/Taiwan_datums
 
 John Hsieh - http://gis.thl.ncku.edu.tw/coordtrans/coordtrans.aspx
 
 =head1 AUTHOR AND COPYRIGHT
 
-Copyright (c) 2006 Yen-Ming Lee. All rights reserved.
+Copyright (c) 2006 Yen-Ming Lee C<< <leeym@leeym.com> >>. All rights reserved.
 This program is free software; you can redistribute it and/or
 modify it under the same terms as Perl itself.
 
