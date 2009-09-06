@@ -1,7 +1,8 @@
 package Geography::NationalGrid::TW;
+use Exporter;
 use strict;
 use vars qw(@ISA $VERSION %ellipsoids %mercators);
-($VERSION) = 0.06;
+($VERSION) = 0.07;
 
 use constant DEFAULT_PROJECTION => 'TWD97';
 
