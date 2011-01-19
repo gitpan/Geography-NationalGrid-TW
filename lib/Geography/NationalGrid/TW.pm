@@ -2,7 +2,7 @@ package Geography::NationalGrid::TW;
 use Exporter;
 use strict;
 use vars qw(@ISA $VERSION %ellipsoids %mercators);
-($VERSION) = 0.07;
+($VERSION) = 0.08;
 
 use constant DEFAULT_PROJECTION => 'TWD97';
 
@@ -159,14 +159,14 @@ know the object interface, given below.
 	use Geography::NationalGrid;
 	use Geography::NationalGrid::TW;
 	# default TWD97
-	my $point1 = new Geography::NationalGrid::TW(
+	my $point97 = new Geography::NationalGrid::TW(
 		'Easting' => 302721.36,
 		'Northing' => 2768851.3995,
 	);
-	printf("Point 1 is %f X and %f Y\n", $point1->easting, $point1->northing);
-	printf("Point 1 is %f N and %f E\n", $point1->latitude, $point1->longitude);
+	printf("Point 97 is %f X and %f Y\n", $point97->easting, $point97->northing);
+	printf("Point 97 is %f N and %f E\n", $point97->latitude, $point97->longitude);
 	# transform to TWD67
-	$point1->transform('TWD67');
+	my $point67 = $point97->transform('TWD67');
 
 =head1 DESCRIPTION
 
